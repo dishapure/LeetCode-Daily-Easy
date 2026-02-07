@@ -1,7 +1,16 @@
+big = []
 num = 5
-arr = []
+for i in range(1,num+1):
+    small = []
+    for j in range(0,i): 
+        
+        if j == 0:
+            small.append(1)
+        elif j == i-1:
+            small.append(1)
+        else:
+            small.append('-')
+    big.append(small)
+    
 
-for i in range(1, num + 1):
-    arr.append([1] * i)
-
-print(arr)
+print(big)
