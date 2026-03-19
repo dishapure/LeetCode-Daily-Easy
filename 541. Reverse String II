@@ -1,0 +1,24 @@
+s = "abcd"
+k = 2
+li = []
+temp = ""
+
+for i in range(len(s)):
+    temp += s[i]  # always add the current character
+    if len(temp) == 2*k:  # if we've collected 2k characters
+        li.append(temp)   # append the chunk
+        temp = ""         # reset temp for the next chunk
+
+# append any leftover characters
+if temp:
+    li.append(temp)
+
+#['abcd', 'efg']
+newli = []
+for j in range(len(li)):
+    t = li[j]
+    reversed_text = t[:k][::-1] + t[k:]
+    newli.append(reversed_text)
+
+ss = ''.join(newli)
+print(ss)
