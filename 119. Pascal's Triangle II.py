@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: List[int]
         """
         big = []
-        num = rowIndex + 1
+        num = rowIndex + 1 # test
 
         for i in range(1, num + 1):
             small = []
